@@ -1,0 +1,31 @@
+body {
+  font-family: Arial;
+  background-color: tan;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color:blue;
+}
+
+#petCount {
+  font-size: 1.5em;
+  margin: 20px 0;
+  color: black;
+}
+
+#petList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#petList li {
+  background-color: teal;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
