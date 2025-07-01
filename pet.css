@@ -6,26 +6,50 @@ body {
 }
 
 h1 {
-  color:blue;
+  color: blue;
 }
 
-#petCount {
-  font-size: 1.5em;
-  margin: 20px 0;
-  color: black;
+form {
+  margin: 20px auto;
+  padding: 15px;
+  background-color: teal;
+  border: 2px solid black;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+form input,
+form select,
+form button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white
+}
+
+form button {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: teal;
+}
+
+#petList li {
+  background-color: teal;
+  color: white;
+  margin: 5px auto;
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 #petList {
   list-style-type: none;
   padding: 0;
-}
-
-#petList li {
-  background-color: teal;
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 }
