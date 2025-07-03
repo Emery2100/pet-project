@@ -5,21 +5,24 @@ let pets = [
     age: 3,
     gender: "Female",
     service: "Grooming",
-    breed: "Golden Retriever"
+    breed: "Golden Retriever",
+    color: "Orange"
   },
   {
     name: "Max",
     age: 5,
     gender: "Male",
     service: "Bathing",
-    breed: "German Shepherd"
+    breed: "German Shepherd",
+    color: "Black"
   },
   {
     name: "Luna",
     age: 2,
     gender: "Female",
     service: "Nail Trim",
-    breed: "Poodle"
+    breed: "Poodle",
+    color: "White"
   }
 ];
 
@@ -43,7 +46,7 @@ function displaySalonInfo() {
   const salonInfo = document.getElementById("salonInfo");
   if (salonInfo) {
     salonInfo.innerHTML = `
-      <h2>${salon.name}</h2>   
+      <p><Strong>${salon.name}</Strong></p>   
       <p>Address: ${salon.address.street}, ${salon.address.city}</p>
       <p>Hours: ${salon.hours.open} - ${salon.hours.close}</p>
     `;
@@ -51,13 +54,14 @@ function displaySalonInfo() {
 }
 
 // Pet Constructor
-function Pet(name, age, gender, breed, service, type) {
+function Pet(name, age, gender, breed, service, type, color) {
   this.name = name;
   this.age = age;
   this.gender = gender;
   this.breed = breed;
   this.service = service;
   this.type = type;
+  this.color = color;
 }
 
 
@@ -85,6 +89,7 @@ function displayRow() {
       <td>${pet.age}</td>
       <td>${pet.service}</td>
       <td>${pet.breed}</td>
+      <td>${pet.color}</td>
       <td><button class="btn btn-danger btn-sm" onclick="deletePet(${i})">Delete</button></td>
     `;
 
