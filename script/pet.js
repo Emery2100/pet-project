@@ -43,7 +43,7 @@ function displaySalonInfo() {
   const salonInfo = document.getElementById("salonInfo");
   if (salonInfo) {
     salonInfo.innerHTML = `
-      <p><strong>${salon.name}</strong></p>
+      <h2>${salon.name}</h2>   
       <p>Address: ${salon.address.street}, ${salon.address.city}</p>
       <p>Hours: ${salon.hours.open} - ${salon.hours.close}</p>
     `;
@@ -60,12 +60,6 @@ function Pet(name, age, gender, breed, service, type) {
   this.type = type;
 }
 
-// Create 3 Pets
-let pet = [
-  new Pet("Bella", 3, "Female", "Golden Retriever", "Grooming", "Dog"),
-  new Pet("Max", 5, "Male", "German Shepherd", "Bathing", "Dog"),
-  new Pet("Luna", 2, "Female", "Poodle", "Nail Trim", "Dog")
-];
 
 // Display the total number of pets
 function displayPetCount() {
@@ -76,18 +70,36 @@ function displayPetCount() {
 }
 
 // Display Pet Names
-function displayPetNames() {
-  const petListElement = document.getElementById("petList");
-  if (petListElement) {
-    petListElement.innerHTML = "";
-    for (let i = 0; i < pets.length; i++) {
-      let listItem = document.createElement("li");
-      listItem.innerText = pets[i].name;
-      petListElement.appendChild(listItem);
-    }
+function displayRow() {
+  const tbody = document.querySelector("#petList tbody");
+  tbody.innerHTML = ""; 
+
+  for (let i = 0; i < pets.length; i++) {
+    const pet = pets[i];
+
+    let row = document.createElement("tr");
+
+    row.innerHTML = `
+      <th scope="row">${i + 1}</th>
+      <td>${pet.name}</td>
+      <td>${pet.age}</td>
+      <td>${pet.service}</td>
+      <td>${pet.breed}</td>
+      <td><button class="btn btn-danger btn-sm" onclick="deletePet(${i})">Delete</button></td>
+    `;
+
+    tbody.appendChild(row);
   }
 }
 
+//Delete Button
+function deletePet(index) {
+  if (confirm("Are you sure you want to delete this pet?")) {
+    pets.splice(index, 1);     // Remove pet from array
+    displayRow();              // Re-render the table
+    displayPetCount();         // Update count if you're showing it
+  }
+}
 
 // Register new pet
 function registerPet(event) {
@@ -103,12 +115,21 @@ function registerPet(event) {
   const newPet = new Pet(name, age, gender, breed, service, type);
   pets.push(newPet);
 
+displayPetCount();              
+displayRow();  
+
   // Clear form
   document.getElementById("petForm").reset();
 }
 
+document.getElementById("petForm").addEventListener("submit", registerPet);
+
+
 // Call display Ffnctions 
-displaySalonInfo();
-displayPetCount();
-displayPetNames();
+document.addEventListener("DOMContentLoaded", () => {
+  displaySalonInfo();
+  displayPetCount();
+  displayRow();
+});
+
 

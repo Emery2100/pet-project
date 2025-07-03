@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fashion Pet Salon</title>
-  <link rel="stylesheet" href="pet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/pet.css">
+    <title>Gotham Grooming</title>
 </head>
 <body>
-  <h1>Welcome to Gotham Grooming</h1>
-  
-  <h2>Pet Registration</h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="pet.html">Gotham Grooming</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="pet.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
+        </li>
 
-  <form id="petForm">
-    <input type="text" id="name" placeholder="Name" required>
-    <input type="number" id="age" placeholder="Age" required>
-    <input type="text" id="gender" placeholder="Gender" required>
-    <input type="text" id="breed" placeholder="Breed" required>
-    <input type="text" id="service" placeholder="Service" required>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <section class="content">
+    <h2>Gotham Grooming</h2>
+    <p>Your furry friend's happiness, hygiene and fighting crime is our #1 priority. At Gotham Grooming, we offer personalized grooming services to keep your pet clean, healthy, and looking their absolute best!</p>
 
-    <select id="type" required>
-      <option value="">Select Type</option>
-      <option value="Dog">Dog</option>
-      <option value="Cat">Cat</option>
+    <div id="services" class="services">
+      <div class="service-card">
+        <h3>Full Grooming</h3>
+        <p>Bath, haircut, nail trim, ear cleaning – a complete makeover for your pup.</p>
+      </div>
+      <div class="service-card">
+        <h3>Bath & Brush</h3>
+        <p>A gentle clean and brush to refresh your dog’s coat and keep it tangle-free.</p>
+      </div>
+      <div class="service-card">
+        <h3>Nail Trimming</h3>
+        <p>Quick, safe, and stress-free nail trimming for your dog’s comfort and health.</p>
+      </div>
+    </div>
+  </section>
 
-    </select>
+  <section class="cta">
+    <h3>Ready to Pamper Your Pup?</h3>
+    <button onclick="">Book an Appointment</button>
+  </section>
 
-    <button type="submit">Register Pet</button>
-    <button type="reset">Clear</button>
-  </form>
-  
-  
-  <h2>Registered Pet Names:</h2>
-  
-  <ul id="petList"></ul>
-  
-  <div id="petCount">Total Pets: 0</div>
-   
   <div id="salonInfo"></div>
-  <script src="pet.js"></script>
+
+  <footer>
+    &copy; 2025 Gotham Grooming. All Rights Reserved.
+  </footer>
+
+
+
+
+
+   
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script/pet.js"></script>
 </body>
 </html>
+  
+  
