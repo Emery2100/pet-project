@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/pet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="style/services.css">
     <title>Services</title>
 
 </head>
@@ -31,51 +31,53 @@
     </div>
   </div>
 </nav>
+<h1 class="center-column">🐾 Services 🐾</h1>
 
-    <header>
-    <h1>Welcome to Paws & Bubbles</h1>
-    <p>Where your dog leaves looking paw-sitively perfect!</p>
-  </header>
-
-  <section class="services">
-    <div class="card">
-      <div class="icon">🛁</div>
-      <h3>Full Grooming</h3>
-      <p>Includes bath, haircut, nail trim, ear cleaning, and brushing for a complete refresh.</p>
+<form id="serviceRegistrationForm" class="container">
+  <div class="mb-3">
+    <label for="serviceName" class="form-label">Name</label>
+    <input type="text" id="serviceName" class="form-control" placeholder="Premium Bath">
+  </div>
+    <div class="mb-3">
+    <label for="serviceDiscription" class="form-label">Description</label>
+    <input type="text" id="serviceDescription" class="form-control" placeholder="Includes shampoo & towel dry">
+  </div>
+  <div class="mb-3">
+    <label for="serviceDuration" class="form-label">Duration</label>
+    <input type="text" id="serviceDuration" class="form-control" placeholder="Estimated time">
     </div>
+    <div class="mb-3">
+    <label for="servicePrice" class="form-label">Price</label>
+    <input type="number" id="servicePrice" class="form-control" placeholder="10.99" step="any">
+  </div>
 
-    <div class="card">
-      <div class="icon">🧼</div>
-      <h3>Bath & Brush</h3>
-      <p>A soothing bath with shampoo, gentle brushing, and a light coat conditioning.</p>
-    </div>
+  <button type="submit" class="btn btn-primary"> Register Service</button>
+  <button type="reset" id = "clearButton" class="btn btn-primary"> Clear </button>
+  
+</form>
+</div>
+<div class="center-column">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <h3>Receipt</h3>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" id="resultservicename">Service Name</li>
+    <li class="list-group-item" id="resultservicedescription">Service Description</li>
+    <li class="list-group-item" id="resultserviceduration">Service Duration</li>
+    <li class="list-group-item" id="resultserviceprice">Service Price</li>
+  </ul>
+  <button class="btn btn-primary" id="loadButton">Receipt</button>
+</div>
+</div>
 
-    <div class="card">
-      <div class="icon">✂️</div>
-      <h3>Nail Trimming</h3>
-      <p>Professional trimming to keep paws healthy and prevent scratching or discomfort.</p>
-    </div>
+  <div class="center-column">
+    <h2>Light Mode</h2>
+    <button id="changeModeButton">Change Mode</button>
+  </div>
 
-    <div class="card">
-      <div class="icon">🦷</div>
-      <h3>Teeth Cleaning</h3>
-      <p>Keep your dog's breath fresh and mouth healthy with our gentle dental care service.</p>
-    </div>
 
-    <div class="card">
-      <div class="icon">👃</div>
-      <h3>De-shedding</h3>
-      <p>Remove excess fur with special tools that reduce shedding and promote a healthy coat.</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">💖</div>
-      <h3>Spa Package</h3>
-      <p>Treat your pup to the ultimate relaxation experience with massage, aromatherapy, and grooming.</p>
-    </div>
-  </section>
-
-  <footer>
+  <footer class="center-column">
     &copy; 2025 Gotham Grooming. All rights reserved.
   </footer>
 
@@ -83,9 +85,13 @@
 
 
 
-
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  
+  <script src="script/services.js"></script>
+  
 </body>
 </html>

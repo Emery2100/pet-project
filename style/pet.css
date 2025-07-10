@@ -189,9 +189,10 @@ padding: 12px 25px;
 font-size: 1em;
 border-radius: 8px;
 cursor: pointer;
-transition: background 0.3s;
+transition:  0.3s;
 }
 
 .cta button:hover {
 background-color: #dd692e;
 }
+

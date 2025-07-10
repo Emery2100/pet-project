@@ -1,0 +1,46 @@
+:root{
+    --background: #c9c9f1; 
+    --surface: #a8a8c5;
+    --text: #06225f;
+    --button: #6eb9f3;
+}
+
+.dark-mode{
+    --background: rgb(46, 44, 44);
+    --surface: #1b2742;
+    --text: #b0b0db;
+    --button: #2d7c54;
+}
+
+.center-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+button {
+  background-color: var(--button);
+  color: white;
+  border-radius: 100px;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid #ccc;
+}
+
+h1, h2, label {
+  color: var(--text);
+}
+
+.error {
+  border: 2px solid red;
+}
